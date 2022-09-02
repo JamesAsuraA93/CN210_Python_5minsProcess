@@ -6,8 +6,9 @@ def find_Pi_digits():
     q, r, t, k, m, x = 1, 0, 1, 1, 3, 3
     while True:
         end = time.time()
-        if (end - start) >= 600:  # (sec) : 600 sec = 5 minutes
-            print(f"Now times = {(end - start)} sec")
+        print(f"Now times = {(end - start)} sec")
+        if (end - start) >= 300:  # (sec) : 300 sec = 5 minutes
+            print(f"Finish times on {(end - start)} sec")
             break
         if 4 * q + r - t < m * t:
             yield m
